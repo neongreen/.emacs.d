@@ -6,6 +6,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(fill-column 77)
+ '(split-width-threshold 100)
  '(tool-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces

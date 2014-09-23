@@ -6,6 +6,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(fill-column 77)
+ '(tool-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

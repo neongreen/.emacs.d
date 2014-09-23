@@ -4,6 +4,7 @@
 
 (require 'multiple-cursors)
 (require 'expand-region)
+(require 'magit)
 (require 'utils)
 
 ;; Movement and navigation.
@@ -64,6 +65,10 @@
 
 (define-key my-keys-minor-mode-map (kbd "C--") 'text-scale-decrease)
 (define-key my-keys-minor-mode-map (kbd "C-=") 'text-scale-increase)
+
+;; Magit.
+
+(define-key my-keys-minor-mode-map (kbd "C-8") 'magit-status)
 
 ;; End of key definitions.
 

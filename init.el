@@ -13,3 +13,6 @@
 
 ;; Load custom keybindings.
 (require 'keys)
+
+;; Enable kill-as-delete.
+(require 'kill-as-delete)

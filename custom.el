@@ -7,6 +7,7 @@
  '(cua-mode t nil (cua-base))
  '(fill-column 77)
  '(kill-whole-line t)
+ '(my/kill-as-delete t)
  '(split-width-threshold 100)
  '(tool-bar-mode nil)
  '(word-wrap t))

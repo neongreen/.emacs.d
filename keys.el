@@ -56,6 +56,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-w") 'delete-window)
 (define-key my-keys-minor-mode-map (kbd "M-w") 'kill-buffer)
 (define-key my-keys-minor-mode-map (kbd "M-e") 'split-window-right)
+(define-key my-keys-minor-mode-map (kbd "C-e") 'my/switch-to-next-window)
 
 ;; Display.
 

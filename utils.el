@@ -36,4 +36,9 @@
     (setq deactivate-mark nil)
     (exchange-point-and-mark)))
 
+(defun my/switch-to-next-window ()
+  "Switch to the next window"
+  (interactive)
+  (other-window 1))
+
 (provide 'utils)

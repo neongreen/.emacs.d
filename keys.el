@@ -1,5 +1,65 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
+;; Required libraries.
+
+(require 'multiple-cursors)
+(require 'expand-region)
+
+;; Movement and navigation.
+
+(define-key my-keys-minor-mode-map (kbd "C-1") 'beginning-of-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-2") 'end-of-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-9") 'move-beginning-of-line)
+(define-key my-keys-minor-mode-map (kbd "C-0") 'move-end-of-line)
+(define-key my-keys-minor-mode-map (kbd "C-/") 'next-error)
+(define-key my-keys-minor-mode-map (kbd "M-/") 'previous-error)
+
+;; Regions.
+
+(define-key my-keys-minor-mode-map (kbd "C-a") 'mark-paragraph)
+(define-key my-keys-minor-mode-map (kbd "M-a") 'mark-whole-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-,") 'mc/mark-next-like-this)
+(define-key my-keys-minor-mode-map (kbd "C-n") 'er/expand-region)
+
+
+;; Editing.
+
+(define-key my-keys-minor-mode-map (kbd "C-d")   'kill-line)
+(define-key my-keys-minor-mode-map (kbd "M-=")   'align-regexp)
+(define-key my-keys-minor-mode-map (kbd "<tab>") 'dabbrev-expand)
+
+;; Macros.
+
+(define-key my-keys-minor-mode-map (kbd "C-(") 'kmacro-start-macro)
+(define-key my-keys-minor-mode-map (kbd "C-)") 'kmacro-end-macro)
+(define-key my-keys-minor-mode-map (kbd "C-.") 'kmacro-end-and-call-macro)
+
+;; Search and replacement.
+
+(define-key my-keys-minor-mode-map (kbd "C-s") 'isearch-forward-regexp)
+(define-key my-keys-minor-mode-map (kbd "C-r") 'query-replace-regexp)
+
+;; Files.
+
+(define-key my-keys-minor-mode-map (kbd "C-f") 'save-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-o") 'find-file)
+(define-key my-keys-minor-mode-map (kbd "M-r") 'revert-buffer)
+
+;; Windows and buffers.
+
+(define-key my-keys-minor-mode-map (kbd "C-t") 'switch-to-buffer)
+(define-key my-keys-minor-mode-map (kbd "M-t") 'ibuffer)
+(define-key my-keys-minor-mode-map (kbd "C-w") 'delete-window)
+(define-key my-keys-minor-mode-map (kbd "M-w") 'kill-buffer)
+(define-key my-keys-minor-mode-map (kbd "M-e") 'split-window-right)
+
+;; Display.
+
+(define-key my-keys-minor-mode-map (kbd "C--") 'text-scale-decrease)
+(define-key my-keys-minor-mode-map (kbd "C-=") 'text-scale-increase)
+
+;; End of key definitions.
+
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
   t " my-keys" 'my-keys-minor-mode-map)

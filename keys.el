@@ -12,6 +12,8 @@
 (define-key my-keys-minor-mode-map (kbd "C-2") 'end-of-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-9") 'my/move-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-0") 'move-end-of-line)
+(define-key my-keys-minor-mode-map (kbd "C-k") 'my/scroll-down-some)
+(define-key my-keys-minor-mode-map (kbd "C-l") 'my/scroll-up-some)
 (define-key my-keys-minor-mode-map (kbd "C-/") 'next-error)
 (define-key my-keys-minor-mode-map (kbd "M-/") 'previous-error)
 

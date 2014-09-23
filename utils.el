@@ -64,4 +64,14 @@ point reaches the beginning or end of the buffer, stop there."
     (when (= orig-point (point))
       (move-beginning-of-line 1))))
 
+(defun my/scroll-down-some ()
+  "Move buffer several lines down (i.e. point goes up)."
+  (interactive)
+  (cua-scroll-down 18))
+
+(defun my/scroll-up-some ()
+  "Move buffer several lines up (i.e. point goes down)."
+  (interactive)
+  (cua-scroll-up 18))
+
 (provide 'utils)

@@ -16,3 +16,6 @@
 
 ;; Enable kill-as-delete.
 (require 'kill-as-delete)
+
+;; Load haskell-mode.
+(require 'haskell)

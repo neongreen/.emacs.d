@@ -19,3 +19,6 @@
 
 ;; Load haskell-mode.
 (require 'haskell)
+
+;; Get rid of annoying “yes or no” questions.
+(defalias 'yes-or-no-p 'y-or-n-p)

@@ -1,3 +1,5 @@
+(require 'thingatpt)
+
 (defun my/indent-left ()
   "Shift code block one column to the left."
   (interactive)
@@ -73,5 +75,13 @@ point reaches the beginning or end of the buffer, stop there."
   "Move buffer several lines up (i.e. point goes down)."
   (interactive)
   (cua-scroll-up 18))
+
+(defun my/occur-region ()
+  "Call occur on selected text; if no text is selected, use word at point."
+  (interactive)
+  (occur (regexp-quote
+           (if (use-region-p)
+             (buffer-substring (region-beginning) (region-end))
+             (word-at-point)))))
 
 (provide 'utils)

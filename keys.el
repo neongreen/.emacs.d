@@ -59,6 +59,8 @@
 (define-key my-keys-minor-mode-map (kbd "M-s r") 'rgrep)
 (define-key my-keys-minor-mode-map (kbd "M-s f") 'findr-query-replace)
 
+(define-key my-keys-minor-mode-map (kbd "M-s M-o") 'my/occur-region)
+
 ;; Files.
 
 (define-key my-keys-minor-mode-map (kbd "C-f") 'save-buffer)

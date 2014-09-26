@@ -97,9 +97,9 @@
 
 (my-keys-minor-mode 1)
 
-(defun my-minibuffer-setup-hook ()
+(defun disable-my-keys ()
   (my-keys-minor-mode 0))
 
-(add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
+(add-hook 'minibuffer-setup-hook 'disable-my-keys)
 
 (provide 'keys)

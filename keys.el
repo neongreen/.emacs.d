@@ -34,16 +34,16 @@
 
 ;; Editing.
 
-(define-key my-keys-minor-mode-map (kbd "C-d")   'kill-line)
+(define-key my-keys-minor-mode-map (kbd "C-d") 'kill-line)
 
-(define-key my-keys-minor-mode-map (kbd "M-=")   'align-regexp)
+(define-key my-keys-minor-mode-map (kbd "M-=") 'align-regexp)
 
 (define-key my-keys-minor-mode-map (kbd "<tab>") 'dabbrev-expand)
 
-(define-key my-keys-minor-mode-map (kbd "C-<")   'my/indent-left)
-(define-key my-keys-minor-mode-map (kbd "C->")   'my/indent-right)
+(define-key my-keys-minor-mode-map (kbd "C-<") 'my/indent-left)
+(define-key my-keys-minor-mode-map (kbd "C->") 'my/indent-right)
 
-(define-key my-keys-minor-mode-map (kbd "C-'")   'my/duplicate)
+(define-key my-keys-minor-mode-map (kbd "C-'") 'my/duplicate)
 
 ;; Macros.
 

@@ -12,10 +12,13 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-1") 'beginning-of-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-2") 'end-of-buffer)
+
 (define-key my-keys-minor-mode-map (kbd "C-9") 'my/move-beginning-of-line)
 (define-key my-keys-minor-mode-map (kbd "C-0") 'move-end-of-line)
+
 (define-key my-keys-minor-mode-map (kbd "C-k") 'my/scroll-down-some)
 (define-key my-keys-minor-mode-map (kbd "C-l") 'my/scroll-up-some)
+
 (define-key my-keys-minor-mode-map (kbd "C-/") 'next-error)
 (define-key my-keys-minor-mode-map (kbd "M-/") 'previous-error)
 
@@ -23,17 +26,23 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-a") 'mark-paragraph)
 (define-key my-keys-minor-mode-map (kbd "M-a") 'mark-whole-buffer)
+
 (define-key my-keys-minor-mode-map (kbd "C-,") 'mc/mark-next-like-this)
+
 (define-key my-keys-minor-mode-map (kbd "C-n") 'er/expand-region)
 
 
 ;; Editing.
 
 (define-key my-keys-minor-mode-map (kbd "C-d")   'kill-line)
+
 (define-key my-keys-minor-mode-map (kbd "M-=")   'align-regexp)
+
 (define-key my-keys-minor-mode-map (kbd "<tab>") 'dabbrev-expand)
+
 (define-key my-keys-minor-mode-map (kbd "C-<")   'my/indent-left)
 (define-key my-keys-minor-mode-map (kbd "C->")   'my/indent-right)
+
 (define-key my-keys-minor-mode-map (kbd "C-'")   'my/duplicate)
 
 ;; Macros.
@@ -53,15 +62,19 @@
 ;; Files.
 
 (define-key my-keys-minor-mode-map (kbd "C-f") 'save-buffer)
+
 (define-key my-keys-minor-mode-map (kbd "C-o") 'find-file)
+
 (define-key my-keys-minor-mode-map (kbd "M-r") 'revert-buffer)
 
 ;; Windows and buffers.
 
 (define-key my-keys-minor-mode-map (kbd "C-t") 'switch-to-buffer)
 (define-key my-keys-minor-mode-map (kbd "M-t") 'ibuffer)
+
 (define-key my-keys-minor-mode-map (kbd "C-w") 'delete-window)
 (define-key my-keys-minor-mode-map (kbd "M-w") 'kill-buffer)
+
 (define-key my-keys-minor-mode-map (kbd "M-e") 'split-window-right)
 (define-key my-keys-minor-mode-map (kbd "C-e") 'my/switch-to-next-window)
 

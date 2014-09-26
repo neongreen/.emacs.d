@@ -5,6 +5,7 @@
 (require 'multiple-cursors)
 (require 'expand-region)
 (require 'magit)
+(require 'findr)
 (require 'utils)
 
 ;; Movement and navigation.
@@ -45,6 +46,9 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-s") 'isearch-forward-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-r") 'query-replace-regexp)
+
+(define-key my-keys-minor-mode-map (kbd "M-s r") 'rgrep)
+(define-key my-keys-minor-mode-map (kbd "M-s f") 'findr-query-replace)
 
 ;; Files.
 

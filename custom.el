@@ -12,6 +12,7 @@
  '(haskell-process-suggest-overloaded-strings nil)
  '(haskell-process-suggest-remove-import-lines t)
  '(haskell-process-type (quote cabal-repl))
+ '(haskell-tags-on-save t)
  '(indent-tabs-mode nil)
  '(kill-whole-line t)
  '(my/kill-as-delete t)

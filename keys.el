@@ -63,7 +63,7 @@
 
 ;; Files.
 
-(define-key my-keys-minor-mode-map (kbd "C-f") 'save-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-f") (kbd "C-x C-s")) ; generic
 
 (define-key my-keys-minor-mode-map (kbd "C-o") 'find-file)
 

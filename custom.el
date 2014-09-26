@@ -7,7 +7,6 @@
  '(cua-mode t nil (cua-base))
  '(fill-column 77)
  '(haskell-interactive-popup-errors nil)
- '(haskell-mode-hook (quote (turn-on-haskell-indent)))
  '(haskell-process-log t)
  '(haskell-process-suggest-language-pragmas nil)
  '(haskell-process-suggest-overloaded-strings nil)

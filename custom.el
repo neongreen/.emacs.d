@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(fill-column 77)
  '(haskell-interactive-popup-errors nil)
  '(haskell-process-log t)

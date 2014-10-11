@@ -85,6 +85,8 @@
 (define-key my-keys-minor-mode-map (kbd "C--") 'text-scale-decrease)
 (define-key my-keys-minor-mode-map (kbd "C-=") 'text-scale-increase)
 
+(define-key my-keys-minor-mode-map (kbd "M-s v") 'variable-pitch-mode)
+
 ;; Magit.
 
 (define-key my-keys-minor-mode-map (kbd "C-8") 'magit-status)

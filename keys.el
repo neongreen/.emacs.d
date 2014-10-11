@@ -51,6 +51,10 @@
 (define-key my-keys-minor-mode-map (kbd "C-)") 'kmacro-end-macro)
 (define-key my-keys-minor-mode-map (kbd "C-.") 'kmacro-end-and-call-macro)
 
+;; Information.
+
+(define-key my-keys-minor-mode-map (kbd "M-s c") 'count-words)
+
 ;; Search and replacement.
 
 (define-key my-keys-minor-mode-map (kbd "C-s") 'isearch-forward-regexp)

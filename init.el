@@ -22,3 +22,7 @@
 
 ;; Get rid of annoying “yes or no” questions.
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Specify which keys count as “nice” keys for ace-jump.
+(setq ace-jump-mode-move-keys
+  (string-to-list "fwarsiokldxcvnhm,./"))

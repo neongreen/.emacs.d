@@ -25,4 +25,4 @@
 
 ;; Specify which keys count as “nice” keys for ace-jump.
 (setq ace-jump-mode-move-keys
-  (string-to-list "fwarsiokldxcvnhm,./"))
+  (string-to-list "eklioswadfxcrvn,hm./"))

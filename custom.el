@@ -16,6 +16,9 @@
  '(haskell-tags-on-save t)
  '(indent-tabs-mode nil)
  '(kill-whole-line t)
+ '(markdown-hr-strings
+   (quote
+    ("-----------------------------------------------------------------------------" "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" "---------------------------------------" "* * * * * * * * * * * * * * * * * * * *" "---------" "* * * * *")))
  '(my/kill-as-delete t)
  '(split-width-threshold 100)
  '(text-scale-mode-step 1.1)

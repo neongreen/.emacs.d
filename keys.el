@@ -20,6 +20,8 @@
 (define-key my-keys-minor-mode-map (kbd "C-k") 'my/scroll-down-some)
 (define-key my-keys-minor-mode-map (kbd "C-l") 'my/scroll-up-some)
 
+(define-key my-keys-minor-mode-map (kbd "M-l") 'recenter-top-bottom)
+
 (define-key my-keys-minor-mode-map (kbd "C-/") 'next-error)
 (define-key my-keys-minor-mode-map (kbd "M-/") 'previous-error)
 
@@ -33,7 +35,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-,") 'mc/mark-next-like-this)
 
 (define-key my-keys-minor-mode-map (kbd "C-n") 'er/expand-region)
-
 
 ;; Editing.
 

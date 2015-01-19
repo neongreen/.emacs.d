@@ -18,6 +18,7 @@
  '(kill-whole-line t)
  '(my/kill-as-delete t)
  '(split-width-threshold 100)
+ '(text-scale-mode-step 1.1)
  '(tool-bar-mode nil)
  '(undo-limit 8000000)
  '(undo-strong-limit 12000000)

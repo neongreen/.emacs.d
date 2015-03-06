@@ -1,0 +1,9 @@
+*~
+*#
+notes
+session.*
+tramp
+auto-save-list/
+elpa/
+.mc-lists.el
+*.dat

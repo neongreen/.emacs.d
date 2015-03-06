@@ -26,3 +26,13 @@
 ;; Specify which keys count as “nice” keys for ace-jump.
 (setq ace-jump-mode-move-keys
   (string-to-list "eklioswadfxcrvn,hm./"))
+
+;; Prompt for directory creation automatically when saving a file.
+;; (When creating a file in an unexistent directory.)
+(add-hook 'before-save-hook
+  (lambda ()
+    (when buffer-file-name
+      (let ((dir (file-name-directory buffer-file-name)))
+        (when (and (not (file-exists-p dir))
+                   (y-or-n-p (format "Create directory %s does not exist. Create it?" dir)))
+          (make-directory dir t))))))

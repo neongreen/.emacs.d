@@ -15,6 +15,7 @@
  '(haskell-process-type (quote cabal-repl))
  '(haskell-tags-on-save t)
  '(indent-tabs-mode nil)
+ '(initial-buffer-choice (quote remember-notes))
  '(kill-whole-line t)
  '(markdown-hr-strings
    (quote

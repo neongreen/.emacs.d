@@ -25,6 +25,7 @@
  '(tool-bar-mode nil)
  '(undo-limit 8000000)
  '(undo-strong-limit 12000000)
+ '(use-dialog-box nil)
  '(word-wrap t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

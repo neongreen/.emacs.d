@@ -5,6 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (solarized-dark)))
+ '(custom-safe-themes
+   (quote
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(fill-column 77)
  '(haskell-interactive-popup-errors nil)

@@ -75,6 +75,8 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-r") 'revert-buffer)
 
+(define-key my-keys-minor-mode-map (kbd "C-x C-r") 'my/rename-current-buffer-file)
+
 ;; Windows and buffers.
 
 (define-key my-keys-minor-mode-map (kbd "C-t") 'switch-to-buffer)

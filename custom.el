@@ -40,6 +40,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(font-lock-comment-face ((t (:background "#073642" :foreground "#839496"))))
- '(font-lock-doc-face ((t (:background "#073642" :foreground "#6c71c4"))))
+ '(font-lock-comment-face ((t (:inherit highlight))))
+ '(font-lock-doc-face ((t (:foreground "#6c71c4" :slant normal))))
  '(variable-pitch ((t (:height 1.225 :family "Sans")))))

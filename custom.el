@@ -35,6 +35,7 @@
  '(split-width-threshold 100)
  '(text-scale-mode-step 1.1)
  '(tool-bar-mode nil)
+ '(menu-bar-mode nil)
  '(undo-limit 8000000)
  '(undo-strong-limit 12000000)
  '(use-dialog-box nil)

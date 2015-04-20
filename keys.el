@@ -39,6 +39,7 @@
 ;; Editing.
 
 (define-key my-keys-minor-mode-map (kbd "C-d") 'kill-line)
+(define-key my-keys-minor-mode-map (kbd "M-c") 'kill-whole-line)
 
 (define-key my-keys-minor-mode-map (kbd "M-=") 'align-regexp)
 

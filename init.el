@@ -14,6 +14,9 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+;; Prevent the Magit upgrade warning from showing every time.
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 ;; Load haskell-mode.
 (require 'haskell)
 

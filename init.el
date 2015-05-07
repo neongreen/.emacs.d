@@ -14,14 +14,14 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+;; Load haskell-mode.
+(require 'haskell)
+
 ;; Load custom keybindings.
 (require 'keys)
 
 ;; Enable kill-as-delete.
 (require 'kill-as-delete)
-
-;; Load haskell-mode.
-(require 'haskell)
 
 ;; Get rid of annoying “yes or no” questions.
 (defalias 'yes-or-no-p 'y-or-n-p)

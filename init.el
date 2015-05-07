@@ -9,11 +9,6 @@
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-;; Load “customize”d variables.
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(when (file-exists-p custom-file)
-  (load custom-file))
-
 ;; Prevent the Magit upgrade warning from showing every time.
 (setq magit-last-seen-setup-instructions "1.4.0")
 
@@ -42,3 +37,8 @@
         (when (and (not (file-exists-p dir))
                    (y-or-n-p (format "Create directory %s does not exist. Create it?" dir)))
           (make-directory dir t))))))
+
+;; Load “customize”d variables.
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))

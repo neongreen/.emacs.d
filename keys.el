@@ -27,6 +27,9 @@
 
 (define-key my-keys-minor-mode-map (kbd "<tab>") 'ace-jump-word-mode)
 
+(define-key my-keys-minor-mode-map (kbd "C-b") 'my/push-mark)
+(define-key my-keys-minor-mode-map (kbd "M-b") 'my/pop-mark)
+
 ;; Regions.
 
 (define-key my-keys-minor-mode-map (kbd "C-a") 'mark-paragraph)

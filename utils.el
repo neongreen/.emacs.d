@@ -38,6 +38,15 @@
     (setq deactivate-mark nil)
     (exchange-point-and-mark)))
 
+(defun my/push-mark ()
+  (interactive)
+  (cua-set-mark)
+  (cua-set-mark))
+
+(defun my/pop-mark ()
+  (interactive)
+  (cua-set-mark 0))
+
 (defun my/switch-to-next-window ()
   "Switch to the next window"
   (interactive)

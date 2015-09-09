@@ -61,6 +61,8 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-s c") 'count-words)
 
+(define-key my-keys-minor-mode-map (kbd "M-s i") 'describe-char)
+
 ;; Search and replacement.
 
 (define-key my-keys-minor-mode-map (kbd "C-s") 'isearch-forward-regexp)

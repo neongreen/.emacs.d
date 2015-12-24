@@ -105,6 +105,8 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-s v") 'variable-pitch-mode)
 
+(define-key my-keys-minor-mode-map (kbd "M-s t") 'my/switch-theme)
+
 ;; Magit.
 
 (define-key my-keys-minor-mode-map (kbd "C-8") 'magit-status)

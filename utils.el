@@ -110,4 +110,12 @@ point reaches the beginning or end of the buffer, stop there."
           (message "File '%s' successfully renamed to '%s'"
                    name (file-name-nondirectory new-name)))))))
 
+(defun my/switch-theme ()
+  "Switch between light and dark themes."
+  (interactive)
+  (let ((is-light (find 'solarized-light custom-enabled-themes)))
+    (dolist (theme custom-enabled-themes)
+      (disable-theme theme))
+    (load-theme (if is-light 'solarized-dark 'solarized-light))))
+
 (provide 'utils)

@@ -21,6 +21,10 @@
 ;; Enable kill-as-delete.
 (require 'kill-as-delete)
 
+;; Load Yasnippet.
+(require 'yasnippet)
+(yas-global-mode 1)
+
 ;; Get rid of annoying “yes or no” questions.
 (defalias 'yes-or-no-p 'y-or-n-p)
 

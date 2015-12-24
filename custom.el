@@ -41,7 +41,8 @@
  '(undo-limit 8000000)
  '(undo-strong-limit 12000000)
  '(use-dialog-box nil)
- '(word-wrap t))
+ '(word-wrap t)
+ '(yas-indent-line (quote fixed)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

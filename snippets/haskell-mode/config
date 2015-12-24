@@ -1,0 +1,66 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: read and write a JSON config/etc
+# key: config
+# binding: direct-keybinding
+# --
+
+$0
+-- Files
+import System.Directory    -- directory
+import System.FilePath     -- filepath
+-- JSON
+import Data.Aeson as Aeson                   -- aeson
+import Data.Aeson.Encode.Pretty as Aeson     -- aeson-pretty
+-- ByteString
+import qualified Data.ByteString as BS
+import qualified Data.ByteString.Lazy as BSL
+
+data ${1:Config} = $1 {
+  x :: Int }
+
+default$1 :: $1
+default$1 = $1 {
+  x = 0 }
+
+instance FromJSON $1 where
+  parseJSON = withObject "$2" \$ \o -> do
+    x <- o .:? "x" .!= x default$1
+    return $1{..}
+
+instance ToJSON $1 where
+  toJSON $1{..} = object [
+    "x" .= x ]
+
+-- | Get directory with application data.
+getDataDirectory :: IO FilePath
+getDataDirectory = do
+  dir <- getAppUserDataDirectory "$4"
+  ex <- doesDirectoryExist dir
+  unless ex \$
+    createDirectory dir
+  return dir
+
+read$1 :: IO $1
+read$1 = do
+  dir <- getDataDirectory
+  let filename = dir </> "${3:config}.json"
+  exists <- doesFileExist filename
+  when (not exists) \$
+    BSL.writeFile filename (Aeson.encodePretty default$1)
+ contents <- BSL.fromStrict <\$> BS.readFile filename
+  return (fromMaybe default$1 (Aeson.decode' contents))
+
+modify$1 :: ($1 -> IO $1) -> IO ()
+modify$1 func = do
+  dir <- getDataDirectory
+  file <- read$1
+  -- Just writing encoded data to the file isn't safe, because if something
+  -- happens while we're writing (such as power outage), we risk losing it.
+  -- So, instead we're going to write into a *different* file, and then
+  -- atomically (or so documentation for 'renameFile' claims) rename the
+  -- new one into the old one. Note: we can't create this file in a
+  -- temporary directory, because it might not be on the same device, which
+  -- would cause renameFile to fail.
+  let newFile = dir </> "$3-new.json"
+  BSL.writeFile newFile . Aeson.encodePretty =<< func file
+  renameFile newFile (dir </> "$3.json")

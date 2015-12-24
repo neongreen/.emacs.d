@@ -16,7 +16,13 @@
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(electric-indent-mode nil)
  '(fill-column 77)
+ '(haskell-indentation-show-indentations nil)
+ '(haskell-indentation-starter-offset 2)
+ '(haskell-interactive-mode-eval-pretty t)
  '(haskell-interactive-popup-errors nil)
+ '(haskell-mode-hook
+   (quote
+    (turn-on-haskell-indentation interactive-haskell-mode)) t)
  '(haskell-process-log t)
  '(haskell-process-suggest-language-pragmas nil)
  '(haskell-process-suggest-no-warn-orphans nil)

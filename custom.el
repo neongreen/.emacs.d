@@ -35,6 +35,8 @@
  '(initial-buffer-choice (quote remember-notes))
  '(kept-new-versions 6)
  '(kill-whole-line t)
+ '(magit-push-always-verify nil)
+ '(magit-use-overlays nil)
  '(markdown-hr-strings
    (quote
     ("-----------------------------------------------------------------------------" "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" "---------------------------------------" "* * * * * * * * * * * * * * * * * * * *" "---------" "* * * * *")))

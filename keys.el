@@ -25,6 +25,10 @@
 (define-key my-keys-minor-mode-map (kbd "C-/") 'next-error)
 (define-key my-keys-minor-mode-map (kbd "M-/") 'previous-error)
 
+(define-key haskell-mode-map (kbd "C-y") 'haskell-mode-jump-to-def-or-tag)
+
+(define-key my-keys-minor-mode-map (kbd "M-y") 'imenu)
+
 (define-key my-keys-minor-mode-map (kbd "<tab>") 'ace-jump-word-mode)
 
 (define-key my-keys-minor-mode-map (kbd "C-b") 'my/push-mark)

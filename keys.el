@@ -55,6 +55,8 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-'") 'my/duplicate)
 
+(define-key my-keys-minor-mode-map (kbd "M-d") 'just-one-space)
+
 ;; Macros.
 
 (define-key my-keys-minor-mode-map (kbd "C-(") 'kmacro-start-macro)

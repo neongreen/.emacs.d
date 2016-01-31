@@ -25,8 +25,6 @@
 (define-key my-keys-minor-mode-map (kbd "C-/") 'next-error)
 (define-key my-keys-minor-mode-map (kbd "M-/") 'previous-error)
 
-(define-key haskell-mode-map (kbd "C-y") 'haskell-mode-jump-to-def-or-tag)
-
 (define-key my-keys-minor-mode-map (kbd "M-y") 'imenu)
 
 (define-key my-keys-minor-mode-map (kbd "<tab>") 'ace-jump-word-mode)
@@ -112,6 +110,14 @@
 ;; Magit.
 
 (define-key my-keys-minor-mode-map (kbd "C-8") 'magit-status)
+
+;; Haskell.
+
+(define-key haskell-mode-map (kbd "C-y") 'haskell-mode-jump-to-def-or-tag)
+
+(define-key haskell-mode-map (kbd "C-c C-p") 'haskell-process-restart)
+
+(define-key haskell-mode-map (kbd "C-c C-o") 'haskell-session-change-target)
 
 ;; End of key definitions.
 

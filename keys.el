@@ -1,6 +1,6 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
-;; Required libraries.
+;; Required libraries
 
 (require 'multiple-cursors)
 (require 'expand-region)
@@ -10,7 +10,7 @@
 (require 'ace-jump-mode)
 (require 'fiplr)
 
-;; Movement and navigation.
+;; Movement and navigation
 
 (define-key my-keys-minor-mode-map (kbd "C-1") 'beginning-of-buffer)
 (define-key my-keys-minor-mode-map (kbd "C-2") 'end-of-buffer)
@@ -33,7 +33,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-b") 'my/push-mark)
 (define-key my-keys-minor-mode-map (kbd "M-b") 'my/pop-mark)
 
-;; Regions.
+;; Regions
 
 (define-key my-keys-minor-mode-map (kbd "C-a") 'mark-paragraph)
 (define-key my-keys-minor-mode-map (kbd "M-a") 'mark-whole-buffer)
@@ -42,7 +42,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-n") 'er/expand-region)
 
-;; Editing.
+;; Editing
 
 (define-key my-keys-minor-mode-map (kbd "C-d") 'kill-line)
 (define-key my-keys-minor-mode-map (kbd "M-c") 'kill-whole-line)
@@ -56,19 +56,19 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-d") 'just-one-space)
 
-;; Macros.
+;; Macros
 
 (define-key my-keys-minor-mode-map (kbd "C-(") 'kmacro-start-macro)
 (define-key my-keys-minor-mode-map (kbd "C-)") 'kmacro-end-macro)
 (define-key my-keys-minor-mode-map (kbd "C-.") 'kmacro-end-and-call-macro)
 
-;; Information.
+;; Information
 
 (define-key my-keys-minor-mode-map (kbd "M-s c") 'count-words)
 
 (define-key my-keys-minor-mode-map (kbd "M-s i") 'describe-char)
 
-;; Search and replacement.
+;; Search and replacement
 
 (define-key my-keys-minor-mode-map (kbd "C-s") 'isearch-forward-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-r") 'query-replace-regexp)
@@ -78,7 +78,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-s M-o") 'my/occur-region)
 
-;; Files.
+;; Files
 
 (define-key my-keys-minor-mode-map (kbd "C-f") (kbd "C-x C-s")) ; generic
 
@@ -89,7 +89,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-x C-r") 'my/rename-current-buffer-file)
 
-;; Windows and buffers.
+;; Windows and buffers
 
 (define-key my-keys-minor-mode-map (kbd "C-t") 'switch-to-buffer)
 (define-key my-keys-minor-mode-map (kbd "M-t") 'ibuffer)
@@ -100,7 +100,7 @@
 (define-key my-keys-minor-mode-map (kbd "M-e") 'split-window-right)
 (define-key my-keys-minor-mode-map (kbd "C-e") 'my/switch-to-next-window)
 
-;; Display.
+;; Display
 
 (define-key my-keys-minor-mode-map (kbd "C--") 'text-scale-decrease)
 (define-key my-keys-minor-mode-map (kbd "C-=") 'text-scale-increase)
@@ -109,11 +109,11 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-s t") 'my/switch-theme)
 
-;; Magit.
+;; Magit
 
 (define-key my-keys-minor-mode-map (kbd "C-8") 'magit-status)
 
-;; Haskell.
+;; Haskell
 
 (define-key haskell-mode-map (kbd "C-y") 'haskell-mode-jump-to-def-or-tag)
 

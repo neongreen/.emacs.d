@@ -8,6 +8,7 @@
 (require 'findr)
 (require 'utils)
 (require 'ace-jump-mode)
+(require 'fiplr)
 
 ;; Movement and navigation.
 
@@ -82,6 +83,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-f") (kbd "C-x C-s")) ; generic
 
 (define-key my-keys-minor-mode-map (kbd "C-o") 'find-file)
+(define-key my-keys-minor-mode-map (kbd "C-p") 'fiplr-find-file)
 
 (define-key my-keys-minor-mode-map (kbd "M-r") 'revert-buffer)
 

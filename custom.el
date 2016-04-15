@@ -16,6 +16,12 @@
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(electric-indent-mode nil)
  '(fill-column 77)
+ '(fiplr-ignored-globs
+   (quote
+    ((directories
+      (".git" ".svn" ".hg" ".bzr" ".cabal-sandbox" "dist"))
+     (files
+      (".#*" "*~" "*.so" "*.jpg" "*.png" "*.gif" "*.pdf" "*.gz" "*.zip")))))
  '(haskell-indentation-show-indentations nil)
  '(haskell-indentation-starter-offset 2)
  '(haskell-interactive-mode-eval-pretty t)

@@ -9,6 +9,7 @@
 (require 'utils)
 (require 'ace-jump-mode)
 (require 'fiplr)
+(require 'neotree)
 
 ;; Movement and navigation
 
@@ -88,6 +89,8 @@
 (define-key my-keys-minor-mode-map (kbd "M-r") 'revert-buffer)
 
 (define-key my-keys-minor-mode-map (kbd "C-x C-r") 'my/rename-current-buffer-file)
+
+(define-key my-keys-minor-mode-map (kbd "C-4") 'neotree-toggle)
 
 ;; Windows and buffers
 

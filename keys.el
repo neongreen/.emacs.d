@@ -95,6 +95,7 @@
 ;; Windows and buffers
 
 (define-key my-keys-minor-mode-map (kbd "C-t") 'switch-to-buffer)
+(define-key my-keys-minor-mode-map (kbd "C-c k") 'my/switch-to-previous-buffer)
 (define-key my-keys-minor-mode-map (kbd "M-t") 'ibuffer)
 
 (define-key my-keys-minor-mode-map (kbd "C-w") 'delete-window)
@@ -102,6 +103,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-e") 'split-window-right)
 (define-key my-keys-minor-mode-map (kbd "C-e") 'my/switch-to-next-window)
+(define-key my-keys-minor-mode-map (kbd "C-c o") 'clone-indirect-buffer)
 
 ;; Display
 

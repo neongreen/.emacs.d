@@ -57,7 +57,8 @@
  '(undo-strong-limit 12000000)
  '(use-dialog-box nil)
  '(word-wrap t)
- '(yas-indent-line (quote fixed)))
+ '(yas-indent-line (quote fixed))
+ '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

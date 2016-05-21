@@ -126,6 +126,10 @@
 
 (define-key haskell-mode-map (kbd "C-c C-o") 'haskell-session-change-target)
 
+;; Snippets
+
+(define-key my-keys-minor-mode-map (kbd "M-s M-s") 'yas-new-snippet)
+
 ;; End of key definitions.
 
 (define-minor-mode my-keys-minor-mode

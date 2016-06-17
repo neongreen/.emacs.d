@@ -34,6 +34,9 @@
 (define-key my-keys-minor-mode-map (kbd "C-b") 'my/push-mark)
 (define-key my-keys-minor-mode-map (kbd "M-b") 'my/pop-mark)
 
+(define-key my-keys-minor-mode-map (kbd "M-9") 'backward-sexp)
+(define-key my-keys-minor-mode-map (kbd "M-0") 'forward-sexp)
+
 ;; Regions
 
 (define-key my-keys-minor-mode-map (kbd "C-a") 'mark-paragraph)
@@ -44,6 +47,8 @@
 (define-key my-keys-minor-mode-map (kbd "C-n") 'er/expand-region)
 
 ;; Editing
+
+(define-key my-keys-minor-mode-map (kbd "C-S-<backspace>") 'backward-kill-sexp)
 
 (define-key my-keys-minor-mode-map (kbd "C-d") 'kill-line)
 (define-key my-keys-minor-mode-map (kbd "M-c") 'kill-whole-line)

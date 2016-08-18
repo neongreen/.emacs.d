@@ -21,9 +21,10 @@
  '(fiplr-ignored-globs
    (quote
     ((directories
-      (".git" ".svn" ".hg" ".bzr" ".cabal-sandbox" "dist"))
+      (".git" ".svn" ".hg" ".bzr" ".cabal-sandbox" ".stack-work" "dist"))
      (files
       (".#*" "*~" "*.so" "*.jpg" "*.png" "*.gif" "*.pdf" "*.gz" "*.zip")))))
+ '(fiplr-root-markers (quote (".git" ".svn" ".hg" ".bzr" "stack.yaml")))
  '(haskell-indentation-show-indentations nil)
  '(haskell-indentation-starter-offset 2)
  '(haskell-interactive-mode-eval-pretty t)

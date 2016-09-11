@@ -10,7 +10,6 @@
 (require 'ace-jump-mode)
 (require 'fiplr)
 (require 'neotree)
-(require 'ag)
 
 ;; Movement and navigation
 
@@ -80,7 +79,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-s") 'isearch-forward-regexp)
 (define-key my-keys-minor-mode-map (kbd "C-r") 'query-replace-regexp)
 
-(define-key my-keys-minor-mode-map (kbd "M-s r") 'ag-regexp)
+(define-key my-keys-minor-mode-map (kbd "M-s r") 'rgrep)
 (define-key my-keys-minor-mode-map (kbd "M-s f") 'findr-query-replace)
 
 (define-key my-keys-minor-mode-map (kbd "M-s M-o") 'my/occur-region)

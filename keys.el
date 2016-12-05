@@ -37,6 +37,8 @@
 (define-key my-keys-minor-mode-map (kbd "M-9") 'backward-sexp)
 (define-key my-keys-minor-mode-map (kbd "M-0") 'forward-sexp)
 
+(define-key my-keys-minor-mode-map (kbd "C-c g") 'goto-line)
+
 ;; Regions
 
 (define-key my-keys-minor-mode-map (kbd "C-a") 'mark-paragraph)

@@ -133,6 +133,8 @@
 
 (define-key haskell-mode-map (kbd "C-c C-o") 'haskell-session-change-target)
 
+(define-key haskell-mode-map (kbd "C-c v a") 'haskell-cabal-add-dependency)
+
 ;; Snippets
 
 (define-key my-keys-minor-mode-map (kbd "M-s M-s") 'yas-new-snippet)

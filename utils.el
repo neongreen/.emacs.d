@@ -1,4 +1,7 @@
+;;; -*- lexical-binding: t -*-
+
 (require 'thingatpt)
+(require 'haskell-mode)
 
 (defun my/indent-left ()
   "Shift code block one column to the left."
@@ -123,5 +126,15 @@ point reaches the beginning or end of the buffer, stop there."
 Repeated invocations toggle between the two most recently open buffers."
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(defun my/haskell-mode-ask-for-tag ()
+  "Ask for a tag to jump to."
+  (interactive)
+  (let ((tags-file-dir (haskell-cabal--find-tags-dir))
+        (tags-revert-without-query t))
+    (when tags-file-dir
+      (let ((tags-file-name (concat tags-file-dir "TAGS"))
+            (current-prefix-arg '(0)))
+        (call-interactively 'xref-find-definitions)))))
 
 (provide 'utils)

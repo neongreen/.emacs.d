@@ -127,7 +127,8 @@
 
 ;; Haskell
 
-(define-key haskell-mode-map (kbd "C-y") 'haskell-mode-jump-to-def-or-tag)
+(define-key haskell-mode-map (kbd "C-y") 'haskell-mode-jump-to-tag)
+(define-key haskell-mode-map (kbd "M-y") 'my/haskell-mode-ask-for-tag)
 
 (define-key haskell-mode-map (kbd "C-c C-p") 'haskell-process-restart)
 

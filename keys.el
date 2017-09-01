@@ -1,5 +1,10 @@
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
 
+;; Defining keys with general is much more convenient
+
+(require 'general)
+(setq general-default-keymaps 'my-keys-minor-mode-map)
+
 ;; Required libraries
 
 (require 'multiple-cursors)
@@ -7,37 +12,55 @@
 (require 'magit)
 (require 'findr)
 (require 'utils)
-(require 'ace-jump-mode)
+(require 'avy)
 (require 'fiplr)
 (require 'neotree)
+(require 'hindent)
+(require 'ivy)
+(require 'god-mode)
+(require 'js)
+(require 'jsx-mode)
+(require 'rjsx-mode)
+(require 'counsel)
+(require 'phi-search)
+
+;; Stuff
+
+(defun select-current-line ()
+  "Select the current line"
+  (interactive)
+  (move-beginning-of-line 1)
+  (push-mark nil nil t)
+  (forward-line 1))
+
+(define-key my-keys-minor-mode-map (kbd "M-x") 'counsel-M-x)
 
 ;; Movement and navigation
 
-(define-key my-keys-minor-mode-map (kbd "C-1") 'beginning-of-buffer)
-(define-key my-keys-minor-mode-map (kbd "C-2") 'end-of-buffer)
+(general-define-key
+  "C-1" 'beginning-of-buffer
+  "C-2" 'end-of-buffer
+  "C-9" 'my/move-beginning-of-line
+  "C-0" 'move-end-of-line
 
-(define-key my-keys-minor-mode-map (kbd "C-9") 'my/move-beginning-of-line)
-(define-key my-keys-minor-mode-map (kbd "C-0") 'move-end-of-line)
+  "C-k" 'my/scroll-down-some
+  "C-l" 'my/scroll-up-some
+  "M-l" 'recenter-top-bottom
 
-(define-key my-keys-minor-mode-map (kbd "C-k") 'my/scroll-down-some)
-(define-key my-keys-minor-mode-map (kbd "C-l") 'my/scroll-up-some)
+  "C-/" 'next-error
+  "M-/" 'previous-error
 
-(define-key my-keys-minor-mode-map (kbd "M-l") 'recenter-top-bottom)
+  "M-i" 'avy-goto-word-or-subword-1
+  "C-i" 'my/goto-char-or-expand
 
-(define-key my-keys-minor-mode-map (kbd "C-/") 'next-error)
-(define-key my-keys-minor-mode-map (kbd "M-/") 'previous-error)
+  "C-b" 'my/push-mark
+  "M-b" 'my/pop-mark
 
-(define-key my-keys-minor-mode-map (kbd "M-y") 'imenu)
+  "M-9" 'backward-sexp
+  "M-0" 'forward-sexp
 
-(define-key my-keys-minor-mode-map (kbd "<tab>") 'ace-jump-word-mode)
-
-(define-key my-keys-minor-mode-map (kbd "C-b") 'my/push-mark)
-(define-key my-keys-minor-mode-map (kbd "M-b") 'my/pop-mark)
-
-(define-key my-keys-minor-mode-map (kbd "M-9") 'backward-sexp)
-(define-key my-keys-minor-mode-map (kbd "M-0") 'forward-sexp)
-
-(define-key my-keys-minor-mode-map (kbd "C-c g") 'goto-line)
+  "C-r" 'goto-line
+)
 
 ;; Regions
 
@@ -47,6 +70,7 @@
 (define-key my-keys-minor-mode-map (kbd "C-,") 'mc/mark-next-like-this)
 
 (define-key my-keys-minor-mode-map (kbd "C-n") 'er/expand-region)
+(define-key my-keys-minor-mode-map (kbd "M-n") 'er/mark-inside-pairs)
 
 ;; Editing
 
@@ -66,60 +90,76 @@
 
 ;; Macros
 
-(define-key my-keys-minor-mode-map (kbd "C-(") 'kmacro-start-macro)
-(define-key my-keys-minor-mode-map (kbd "C-)") 'kmacro-end-macro)
-(define-key my-keys-minor-mode-map (kbd "C-.") 'kmacro-end-and-call-macro)
+(general-define-key
+  "C-(" 'kmacro-start-macro
+  "C-)" 'kmacro-end-macro
+  "C-." 'kmacro-end-and-call-macro
+
+  "M-s C-c" 'cua-copy-region  ;; Ordinary C-c doesn't work in macros
+  "M-s C-x" 'cua-cut-region
+)
 
 ;; Information
 
-(define-key my-keys-minor-mode-map (kbd "M-s c") 'count-words)
-
-(define-key my-keys-minor-mode-map (kbd "M-s i") 'describe-char)
+(general-define-key
+  "M-s c" 'count-words
+  "M-s i" 'describe-char
+)
 
 ;; Search and replacement
 
-(define-key my-keys-minor-mode-map (kbd "C-s") 'isearch-forward-regexp)
-(define-key my-keys-minor-mode-map (kbd "C-r") 'query-replace-regexp)
-
-(define-key my-keys-minor-mode-map (kbd "M-s r") 'rgrep)
-(define-key my-keys-minor-mode-map (kbd "M-s f") 'findr-query-replace)
-
-(define-key my-keys-minor-mode-map (kbd "M-s M-o") 'my/occur-region)
+(general-define-key
+  "C-s"     'phi-search
+  "M-r"     'query-replace-regexp
+  "M-s r"   'my/projectile-ag-regexp
+  "M-s M-r" 'projectile-ag
+  "M-s f"   'findr-query-replace
+  "M-s M-o" 'my/occur-region
+)
 
 ;; Files
 
-(define-key my-keys-minor-mode-map (kbd "C-f") (kbd "C-x C-s")) ; generic
+(general-define-key
+  "C-f"     (general-simulate-keys "C-x C-s")
 
-(define-key my-keys-minor-mode-map (kbd "C-o") 'find-file)
-(define-key my-keys-minor-mode-map (kbd "C-p") 'fiplr-find-file)
+  "M-s p"   'projectile-switch-project
+  "C-o"     'find-file
+  "C-p"     'fiplr-find-file
 
-(define-key my-keys-minor-mode-map (kbd "M-r") 'revert-buffer)
+  "C-c r"   'revert-buffer
+  "C-x C-r" 'my/rename-current-buffer-file
 
-(define-key my-keys-minor-mode-map (kbd "C-x C-r") 'my/rename-current-buffer-file)
-
-(define-key my-keys-minor-mode-map (kbd "C-4") 'neotree-toggle)
+  "C-4"     'neotree-toggle
+)
 
 ;; Windows and buffers
 
-(define-key my-keys-minor-mode-map (kbd "C-t") 'switch-to-buffer)
-(define-key my-keys-minor-mode-map (kbd "C-c k") 'my/switch-to-previous-buffer)
-(define-key my-keys-minor-mode-map (kbd "M-t") 'ibuffer)
+(general-define-key
+  "C-t"   'ivy-switch-buffer
+  "C-c k" 'my/switch-to-previous-buffer
+  "M-t"   'ibuffer
 
-(define-key my-keys-minor-mode-map (kbd "C-w") 'delete-window)
-(define-key my-keys-minor-mode-map (kbd "M-w") 'kill-buffer)
+  "C-w"   'delete-window
+  "M-w"   'kill-buffer
 
-(define-key my-keys-minor-mode-map (kbd "M-e") 'split-window-right)
-(define-key my-keys-minor-mode-map (kbd "C-e") 'my/switch-to-next-window)
-(define-key my-keys-minor-mode-map (kbd "C-c o") 'clone-indirect-buffer)
+  "M-e"   'split-window-right
+  "C-e"   'my/switch-to-next-window
+  "C-c o" 'clone-indirect-buffer
+)
 
 ;; Display
 
-(define-key my-keys-minor-mode-map (kbd "C--") 'text-scale-decrease)
-(define-key my-keys-minor-mode-map (kbd "C-=") 'text-scale-increase)
+(general-define-key
+  "C--"     'text-scale-decrease
+  "C-="     'text-scale-increase
 
-(define-key my-keys-minor-mode-map (kbd "M-s v") 'variable-pitch-mode)
+  "M-s v"   'variable-pitch-mode
+  "M-s t"   'my/switch-theme
 
-(define-key my-keys-minor-mode-map (kbd "M-s t") 'my/switch-theme)
+  "M-s h h" 'hl-line-mode
+  "M-s h ." 'hlt-highlight-symbol
+  "M-s h ," 'hlt-unhighlight-symbol
+)
 
 ;; Magit
 
@@ -127,18 +167,39 @@
 
 ;; Haskell
 
-(define-key haskell-mode-map (kbd "C-y") 'haskell-mode-jump-to-tag)
-(define-key haskell-mode-map (kbd "M-y") 'my/haskell-mode-ask-for-tag)
+(general-define-key :keymaps 'haskell-mode-map
+  "C-y"     'haskell-mode-jump-to-tag
+  "M-y"     'my/haskell-mode-ask-for-tag
+  "C-c C-p" 'haskell-process-restart
+  "C-c C-o" 'haskell-session-change-target
+  "C-c v a" 'haskell-cabal-add-dependency
+  "C-c y"   'haskell-hoogle
+  "M-q"     'hindent-reformat-decl-or-fill
+)
 
-(define-key haskell-mode-map (kbd "C-c C-p") 'haskell-process-restart)
+;; Javascript
 
-(define-key haskell-mode-map (kbd "C-c C-o") 'haskell-session-change-target)
+(define-key js-mode-map (kbd "RET") 'newline-and-indent)
+(define-key jsx-mode-map (kbd "RET") 'newline-and-indent)
+(define-key rjsx-mode-map (kbd "<") 'self-insert-command)
 
-(define-key haskell-mode-map (kbd "C-c v a") 'haskell-cabal-add-dependency)
+;; Scala
+
+(define-key ensime-mode-map (kbd "TAB") 'ensime-company-complete-or-indent)
 
 ;; Snippets
 
 (define-key my-keys-minor-mode-map (kbd "M-s M-s") 'yas-new-snippet)
+
+;; Calc
+
+(define-key my-keys-minor-mode-map (kbd "C-c c") 'quick-calc)
+
+;; Ivy
+
+(general-define-key :keymaps 'ivy-minibuffer-map
+  "M-RET" 'ivy-immediate-done
+)
 
 ;; End of key definitions.
 

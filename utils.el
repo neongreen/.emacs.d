@@ -1,7 +1,11 @@
 ;;; -*- lexical-binding: t -*-
 
 (require 'thingatpt)
+(require 'haskell-cabal)
 (require 'haskell-mode)
+(require 'yasnippet)
+(require 'avy)
+(require 'org)
 
 (defun my/indent-left ()
   "Shift code block one column to the left."
@@ -136,5 +140,30 @@ Repeated invocations toggle between the two most recently open buffers."
       (let ((tags-file-name (concat tags-file-dir "TAGS"))
             (current-prefix-arg '(0)))
         (call-interactively 'xref-find-definitions)))))
+
+(defun my/goto-char-or-expand ()
+  "Expand a snippet; if there's no expandable snippet, run avy."
+  (interactive)
+  (unless (yas-expand)
+    (call-interactively 'avy-goto-char-in-line)))
+
+(defun my/rgrep ()
+  "rgrep without ivy"
+  (interactive)
+  (let ((completing-read-function 'completing-read-default)
+        (completion-in-region-function 'completion--in-region))
+    (call-interactively 'rgrep)))
+
+(defun my/projectile-add-known-project-and-save ()
+  "Add a project and update the list of known projects."
+  (interactive)
+  (call-interactively 'projectile-add-known-project)
+  (projectile-save-known-projects))
+
+(defun my/projectile-ag-regexp ()
+  "Search in a project (with a regex)."
+  (interactive)
+  (let ((current-prefix-arg '(4)))
+    (call-interactively 'projectile-ag)))
 
 (provide 'utils)

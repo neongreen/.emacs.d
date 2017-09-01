@@ -17,7 +17,7 @@
  '(dired-auto-revert-buffer t)
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(electric-indent-mode nil)
- '(fill-column 77)
+ '(fill-column 76)
  '(fiplr-ignored-globs
    (quote
     ((directories

@@ -53,6 +53,10 @@
   (load custom-file))
 (put 'upcase-region 'disabled nil)
 
+;; Open .ihdf files (Intermediate Haskell) as Markdown
+(setq auto-mode-alist (append '(("\\.ihdf$" . markdown-mode))
+      auto-mode-alist))
+
 ;; In org-mode, recalculate & realign all tables on save, etc
 
 (require 'org)

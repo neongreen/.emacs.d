@@ -11,10 +11,17 @@
 ;;   * [M-x imenu] provides an index of functions defined in module.
 
 (require 'haskell-mode)
+(require 'projectile)
 
 (add-to-list 'exec-path "/home/yom/.cabal/bin/")
 
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+
+(defadvice haskell-cabal--find-tags-dir (around csl-tags act)
+  (setq ad-return-value
+    (if (equal (projectile-get-project-directories) '("/home/yom/code/csl/"))
+      "/home/yom/code/csl/"
+      ad-do-it)))
 
 (provide 'haskell)

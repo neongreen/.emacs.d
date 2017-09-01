@@ -70,8 +70,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 102 :width normal))))
+ '(default ((t (:height 100 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(ag-match-face ((t (:foreground "red" :weight bold))))
- '(font-lock-comment-face ((t (:inherit highlight))))
- '(font-lock-doc-face ((t (:foreground "#6c71c4" :slant normal))))
- '(variable-pitch ((t (:height 1.225 :family "Sans")))))
+ '(font-lock-comment-delimiter-face ((t (:inherit highlight :height 1.08 :family "sans"))))
+ '(font-lock-comment-face ((t (:inherit highlight :foreground "#93a1a1" :height 1.08 :family "sans"))))
+ '(font-lock-doc-face ((t (:foreground "#6c71c4" :slant normal :height 1.08 :family "sans"))))
+ '(variable-pitch ((t (:height 1.2 :family "Sans")))))

@@ -12,6 +12,11 @@
 ;; Prevent the Magit upgrade warning from showing every time.
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+;; Record keybinding usage statistics.
+(require 'keyfreq)
+(keyfreq-mode 1)
+(keyfreq-autosave-mode 1)
+
 ;; Load haskell-mode.
 (require 'haskell)
 

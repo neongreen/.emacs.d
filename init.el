@@ -47,3 +47,23 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 (put 'upcase-region 'disabled nil)
+
+;; In org-mode, recalculate & realign all tables on save, etc
+
+(require 'org)
+
+(add-hook 'org-mode-hook
+  (lambda ()
+    (add-hook 'before-save-hook 'my/org-update nil 'local)))
+
+(defun my/org-update ()
+  (interactive)
+  (org-map-entries (lambda ()
+    (call-interactively 'org-update-statistics-cookies)))
+  (org-map-dblocks (lambda ()
+    (org-update-dblock)
+    (redisplay)
+    (re-search-forward org-table-any-line-regexp nil t)
+    (beginning-of-line 1)
+    (when (looking-at org-table-line-regexp)
+      (save-excursion (org-table-align))))))

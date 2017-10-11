@@ -18,10 +18,4 @@
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
-(defadvice haskell-cabal--find-tags-dir (around csl-tags act)
-  (setq ad-return-value
-    (if (equal (projectile-get-project-directories) '("/home/yom/code/csl/"))
-      "/home/yom/code/csl/"
-      ad-do-it)))
-
 (provide 'haskell)

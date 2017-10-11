@@ -20,6 +20,14 @@
 ;; Load haskell-mode.
 (require 'haskell)
 
+(require 'projectile)
+
+(defadvice haskell-cabal--find-tags-dir (around csl-tags act)
+  (setq ad-return-value
+    (if (equal (projectile-get-project-directories) '("/home/yom/code/csl/"))
+      "/home/yom/code/csl/"
+      ad-do-it)))
+
 ;; Load custom keybindings.
 (require 'keys)
 

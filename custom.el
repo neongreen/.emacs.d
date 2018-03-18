@@ -61,6 +61,9 @@
  '(haskell-mode-hook
    (quote
     (turn-on-haskell-indentation interactive-haskell-mode)))
+ '(haskell-process-args-stack-ghci
+   (quote
+    ("--ghci-options=-ferror-spans -fshow-loaded-modules" "--no-build" "--no-load")))
  '(haskell-process-log t)
  '(haskell-process-show-debug-tips nil)
  '(haskell-process-suggest-language-pragmas t)

@@ -13,7 +13,6 @@
 (require 'findr)
 (require 'utils)
 (require 'avy)
-(require 'fiplr)
 (require 'neotree)
 (require 'hindent)
 (require 'ivy)
@@ -124,7 +123,7 @@
 
   "M-s p"   'projectile-switch-project
   "C-o"     'find-file
-  "C-p"     'fiplr-find-file
+  "C-p"     'counsel-git
 
   "C-c r"   'revert-buffer
   "C-x C-r" 'my/rename-current-buffer-file

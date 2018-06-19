@@ -22,6 +22,7 @@
 (require 'rjsx-mode)
 (require 'counsel)
 (require 'phi-search)
+(require 'hasky-stack)
 
 ;; Make C-i different from TAB
 
@@ -77,19 +78,22 @@
 
 ;; Editing
 
-(define-key my-keys-minor-mode-map (kbd "C-S-<backspace>") 'backward-kill-sexp)
-
-(define-key my-keys-minor-mode-map (kbd "C-d") 'kill-line)
-(define-key my-keys-minor-mode-map (kbd "M-c") 'kill-whole-line)
-
-(define-key my-keys-minor-mode-map (kbd "M-=") 'align-regexp)
-
-(define-key my-keys-minor-mode-map (kbd "C-<") 'my/indent-left)
-(define-key my-keys-minor-mode-map (kbd "C->") 'my/indent-right)
-
-(define-key my-keys-minor-mode-map (kbd "C-'") 'my/duplicate)
-
-(define-key my-keys-minor-mode-map (kbd "M-d") 'just-one-space)
+(general-define-key
+  "C-(" 'kmacro-start-macro
+  "C-)" 'kmacro-end-macro
+  "C-." 'kmacro-end-and-call-macro
+  "M-s C-c" 'cua-copy-region  ;; Ordinary C-c doesn't work in macros
+  "M-s C-x" 'cua-cut-region
+  "C-S-<backspace>" 'backward-kill-sexp
+  "C-d" 'kill-line
+  "M-c" 'kill-whole-line
+  "M-=" 'align-regexp
+  "C-<" 'my/indent-left
+  "C->" 'my/indent-right
+  "C-'" 'my/duplicate
+  "M-d" 'my/one-space
+  "<tab>" 'dabbrev-completion
+)
 
 ;; Macros
 
@@ -183,6 +187,7 @@
   "C-c v a" 'haskell-cabal-add-dependency
   "C-c y"   'haskell-hoogle
   "M-q"     'hindent-reformat-decl-or-fill
+  "M-8"     'hasky-stack-execute
 )
 
 ;; Javascript
@@ -190,6 +195,10 @@
 (define-key js-mode-map (kbd "RET") 'newline-and-indent)
 (define-key jsx-mode-map (kbd "RET") 'newline-and-indent)
 (define-key rjsx-mode-map (kbd "<") 'self-insert-command)
+
+;; Rust
+
+(define-key rust-mode-map (kbd "RET") 'newline-and-indent)
 
 ;; Scala
 

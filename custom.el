@@ -17,6 +17,9 @@
  '(dired-auto-revert-buffer t)
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(electric-indent-mode nil)
+ '(elpy-modules
+   (quote
+    (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-yasnippet elpy-module-sane-defaults)))
  '(fill-column 76)
  '(fiplr-ignored-globs
    (quote
@@ -25,6 +28,8 @@
      (files
       (".#*" "*~" "*.so" "*.jpg" "*.png" "*.gif" "*.pdf" "*.gz" "*.zip")))))
  '(fiplr-root-markers (quote (".git" ".svn" ".hg" ".bzr" "stack.yaml")))
+ '(glasses-original-separator "-")
+ '(glasses-separator "-")
  '(grep-command "grep --color -nH -e ")
  '(grep-files-aliases
    (quote
@@ -70,7 +75,7 @@
  '(haskell-process-suggest-no-warn-orphans nil)
  '(haskell-process-suggest-overloaded-strings t)
  '(haskell-process-suggest-remove-import-lines nil)
- '(haskell-process-type (quote auto))
+ '(haskell-process-type (quote stack-ghci))
  '(haskell-tags-on-save t)
  '(hasky-stack-auto-target t)
  '(ido-enable-flex-matching t)
@@ -106,7 +111,7 @@
  '(show-paren-mode t)
  '(show-smartparens-global-mode nil)
  '(sp-show-pair-from-inside nil)
- '(split-width-threshold 100)
+ '(split-width-threshold 120)
  '(tags-case-fold-search nil)
  '(text-scale-mode-step 1.1)
  '(tool-bar-mode nil)
@@ -122,9 +127,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 100 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(default ((t (:height 130 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(ag-match-face ((t (:foreground "red" :weight bold))))
- '(font-lock-comment-delimiter-face ((t (:inherit highlight :height 1.08 :family "sans"))))
- '(font-lock-comment-face ((t (:inherit highlight :height 1.08 :family "sans"))))
- '(font-lock-doc-face ((t (:foreground "#6c71c4" :slant normal :height 1.08 :family "sans"))))
- '(variable-pitch ((t (:height 1.2 :family "Sans")))))
+ '(font-lock-comment-delimiter-face ((t (:inherit highlight :height 1.05 :family "sans"))))
+ '(font-lock-comment-face ((t (:inherit highlight :height 1.05 :family "sans"))))
+ '(font-lock-doc-face ((t (:foreground "#6c71c4" :slant normal :height 1.05 :family "sans"))))
+ '(variable-pitch ((t (:height 1.0 :family "Sans")))))

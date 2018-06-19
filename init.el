@@ -28,6 +28,16 @@
       "/home/yom/code/csl/"
       ad-do-it)))
 
+(require 'rust-mode)
+
+;; Load Scala
+(require 'ensime)
+
+(add-hook 'scala-mode-hook 'ensime-mode)
+
+;; Load Elpy.
+(require 'python)
+
 ;; Load custom keybindings.
 (require 'keys)
 
@@ -62,8 +72,10 @@
 (put 'upcase-region 'disabled nil)
 
 ;; Open .ihdf files (Intermediate Haskell) as Markdown
-(setq auto-mode-alist (append '(("\\.ihdf$" . markdown-mode))
-      auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.ihdf\\'" . markdown-mode))
+
+;; Open .rs files as Rust
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;; In org-mode, recalculate & realign all tables on save, etc
 
@@ -84,3 +96,9 @@
     (beginning-of-line 1)
     (when (looking-at org-table-line-regexp)
       (save-excursion (org-table-align))))))
+(put 'downcase-region 'disabled nil)
+
+;; Let magit work with Github pull-requests
+
+(require 'magit-gh-pulls)
+(add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)

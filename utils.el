@@ -7,6 +7,11 @@
 (require 'avy)
 (require 'org)
 
+(defun my/one-space ()
+  "Just one space."
+  (interactive)
+  (just-one-space -1))
+
 (defun my/indent-left ()
   "Shift code block one column to the left."
   (interactive)

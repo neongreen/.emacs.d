@@ -23,6 +23,10 @@
 (require 'counsel)
 (require 'phi-search)
 
+;; Make C-i different from TAB
+
+(define-key input-decode-map [?\C-i] [C-i])
+
 ;; Stuff
 
 (defun select-current-line ()
@@ -50,7 +54,7 @@
   "M-/" 'previous-error
 
   "M-i" 'avy-goto-word-or-subword-1
-  "C-i" 'my/goto-char-or-expand
+  "<C-i>" 'my/goto-char-or-expand
 
   "C-b" 'my/push-mark
   "M-b" 'my/pop-mark
@@ -184,7 +188,7 @@
 
 ;; Scala
 
-(define-key ensime-mode-map (kbd "TAB") 'ensime-company-complete-or-indent)
+(define-key ensime-mode-map "<C-i>" 'ensime-company-complete-or-indent)
 
 ;; Snippets
 

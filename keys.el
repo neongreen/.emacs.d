@@ -129,7 +129,6 @@
   "C-o"     'find-file
   "C-p"     'counsel-git
 
-  "C-c r"   'revert-buffer
   "C-x C-r" 'my/rename-current-buffer-file
 
   "C-4"     'neotree-toggle
@@ -162,6 +161,12 @@
   "M-s h h" 'hl-line-mode
   "M-s h ." 'hlt-highlight-symbol
   "M-s h ," 'hlt-unhighlight-symbol
+)
+
+;; Compilation
+
+(general-define-key
+  "C-c r" 'recompile
 )
 
 ;; Magit

@@ -23,6 +23,7 @@
 (require 'counsel)
 (require 'phi-search)
 (require 'hasky-stack)
+(require 'crux)
 
 ;; Make C-i different from TAB
 
@@ -151,6 +152,7 @@
   "M-e"   'split-window-right
   "C-e"   'my/switch-to-next-window
   "C-c o" 'clone-indirect-buffer
+  "C-c e" 'crux-transpose-windows
 )
 
 ;; Display

@@ -9,6 +9,12 @@
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
+;; Initialise package system.
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
 ;; Prevent the Magit upgrade warning from showing every time.
 (setq magit-last-seen-setup-instructions "1.4.0")
 

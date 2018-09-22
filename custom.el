@@ -107,7 +107,7 @@
  '(org-tags-column -85)
  '(package-selected-packages
    (quote
-    (typescript-mode web-mode yaml-mode exec-path-from-shell ag solarized-theme yasnippet rust-mode rjsx-mode projectile phi-search noflet neotree magit multiple-cursors magit-gh-pulls keyfreq jsx-mode hindent hasky-stack haskell-mode god-mode general findr expand-region crux counsel avy)))
+    (typescript-mode web-mode yaml-mode exec-path-from-shell ag solarized-theme yasnippet rust-mode rjsx-mode projectile phi-search noflet neotree magit multiple-cursors magit-gh-pulls jsx-mode hindent hasky-stack haskell-mode god-mode general findr expand-region crux counsel avy)))
  '(projectile-completion-system (quote grizzl))
  '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)

@@ -202,10 +202,6 @@
 
 (define-key rust-mode-map (kbd "RET") 'newline-and-indent)
 
-;; Scala
-
-(define-key ensime-mode-map "<C-i>" 'ensime-company-complete-or-indent)
-
 ;; Snippets
 
 (define-key my-keys-minor-mode-map (kbd "M-s M-s") 'yas-new-snippet)

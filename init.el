@@ -24,10 +24,10 @@
 
 (require 'projectile)
 
-(defadvice haskell-cabal--find-tags-dir (around csl-tags act)
+(defadvice haskell-cabal--find-tags-dir (around wire-tags act)
   (setq ad-return-value
-    (if (equal (projectile-get-project-directories) '("/home/yom/code/csl/"))
-      "/home/yom/code/csl/"
+    (if (equal (projectile-get-project-directories) '("/home/yom/wire/server/"))
+      "/home/yom/wire/server/"
       ad-do-it)))
 
 (require 'rust-mode)

@@ -71,6 +71,9 @@
 ;; Open .rs files as Rust
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
+;; Open .js files with web-mode
+(add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
+
 ;; In org-mode, recalculate & realign all tables on save, etc
 
 (require 'org)

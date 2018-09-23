@@ -109,6 +109,7 @@
  '(mouse-wheel-scroll-amount (quote (5 ((shift) . 1) ((control) . 5))))
  '(my/kill-as-delete t)
  '(neo-smart-open t)
+ '(ns-command-modifier (quote control))
  '(org-special-ctrl-a/e nil)
  '(org-startup-indented nil)
  '(org-support-shift-select (quote always))

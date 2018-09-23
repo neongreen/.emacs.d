@@ -24,10 +24,13 @@
 
 (require 'projectile)
 
-(defadvice haskell-cabal--find-tags-dir (around wire-tags act)
+;; When inside a project, even if there is a cabal file in the current
+;; folder, use the project folder to generate tags. This is useful for
+;; projects with several services or subprojects.
+(defadvice haskell-cabal--find-tags-dir (around project-tags act)
   (setq ad-return-value
-    (if (equal (projectile-get-project-directories) '("/home/yom/wire/server/"))
-      "/home/yom/wire/server/"
+    (if (projectile-project-root)
+      (projectile-project-root)
       ad-do-it)))
 
 (require 'rust-mode)

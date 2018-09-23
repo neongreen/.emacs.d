@@ -9,11 +9,9 @@
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-;; Initialise package system.
-(require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
+;; Get path from shell.
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;; Prevent the Magit upgrade warning from showing every time.
 (setq magit-last-seen-setup-instructions "1.4.0")

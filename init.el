@@ -33,7 +33,10 @@
       (projectile-project-root)
       ad-do-it)))
 
+;; Rust
 (require 'rust-mode)
+
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;; Load custom keybindings.
 (require 'keys)
@@ -70,9 +73,6 @@
 
 ;; Open .ihdf files (Intermediate Haskell) as Markdown
 (add-to-list 'auto-mode-alist '("\\.ihdf\\'" . markdown-mode))
-
-;; Open .rs files as Rust
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;; Open .js files with web-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))

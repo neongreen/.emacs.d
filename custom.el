@@ -83,7 +83,7 @@
  '(haskell-process-suggest-overloaded-strings t)
  '(haskell-process-suggest-remove-import-lines nil)
  '(haskell-process-type (quote stack-ghci))
- '(haskell-tags-on-save t)
+ '(haskell-tags-on-save nil)
  '(hasky-stack-auto-target t)
  '(ido-enable-flex-matching t)
  '(indent-tabs-mode nil)

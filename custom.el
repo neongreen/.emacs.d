@@ -8,6 +8,7 @@
  '(backup-by-copying t)
  '(backup-directory-alist (quote (("." . "~/.saves"))))
  '(column-number-mode t)
+ '(company-search-regexp-function (quote regexp-quote))
  '(compilation-ask-about-save nil)
  '(compilation-search-path (quote (nil "../" "../../")))
  '(cua-mode t nil (cua-base))

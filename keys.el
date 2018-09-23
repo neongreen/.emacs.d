@@ -20,6 +20,7 @@
 (require 'js)
 (require 'jsx-mode)
 (require 'rjsx-mode)
+(require 'web-mode)
 (require 'counsel)
 (require 'phi-search)
 (require 'hasky-stack)
@@ -196,6 +197,7 @@
 
 (define-key js-mode-map (kbd "RET") 'newline-and-indent)
 (define-key jsx-mode-map (kbd "RET") 'newline-and-indent)
+(define-key web-mode-map (kbd "RET") 'newline-and-indent)
 (define-key rjsx-mode-map (kbd "<") 'self-insert-command)
 
 ;; Rust

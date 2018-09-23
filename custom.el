@@ -8,6 +8,8 @@
  '(backup-by-copying t)
  '(backup-directory-alist (quote (("." . "~/.saves"))))
  '(column-number-mode t)
+ '(compilation-ask-about-save nil)
+ '(compilation-search-path (quote (nil "../" "../../")))
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (solarized-dark)))
  '(custom-safe-themes

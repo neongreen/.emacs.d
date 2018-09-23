@@ -99,3 +99,7 @@
 
 (require 'magit-gh-pulls)
 (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
+
+;; Whitespace
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)

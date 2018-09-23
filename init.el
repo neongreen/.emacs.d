@@ -16,6 +16,9 @@
 ;; Prevent the Magit upgrade warning from showing every time.
 (setq magit-last-seen-setup-instructions "1.4.0")
 
+;; Persist minibuffer history.
+(savehist-mode 1)
+
 ;; Load haskell-mode.
 (require 'haskell)
 

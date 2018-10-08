@@ -46,8 +46,8 @@
 (general-define-key
   "C-1" 'beginning-of-buffer
   "C-2" 'end-of-buffer
-  "C-9" 'my/move-beginning-of-line
-  "C-0" 'move-end-of-line
+  "C-j" 'my/move-beginning-of-line
+  "C-;" 'move-end-of-line
 
   "C-k" 'my/scroll-down-some
   "C-l" 'my/scroll-up-some

@@ -77,6 +77,9 @@
 ;; Open .js files with web-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
 
+;; Open .mustache files with web-mode
+(add-to-list 'auto-mode-alist '("\\.mustache$" . web-mode))
+
 ;; In org-mode, recalculate & realign all tables on save, etc
 
 (require 'org)

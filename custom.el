@@ -161,9 +161,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 130 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(default ((t (:height 150 :family "SF Mono"))))
  '(ag-match-face ((t (:foreground "red" :weight bold))))
- '(font-lock-comment-delimiter-face ((t (:inherit highlight :height 1.05 :family "sans"))))
- '(font-lock-comment-face ((t (:inherit highlight :height 1.05 :family "sans"))))
- '(font-lock-doc-face ((t (:foreground "#6c71c4" :slant normal :height 1.05 :family "sans"))))
- '(variable-pitch ((t (:height 1.0 :family "Sans")))))
+ '(font-lock-comment-delimiter-face ((t (:inherit highlight :height 1.05 :family "Ubuntu"))))
+ '(font-lock-comment-face ((t (:inherit highlight :height 1.05 :family "Ubuntu"))))
+ '(font-lock-doc-face ((t (:foreground "#6c71c4" :slant normal :height 1.05 :family "Ubuntu"))))
+ '(variable-pitch ((t (:height 1.05 :family "Ubuntu")))))

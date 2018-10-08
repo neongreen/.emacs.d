@@ -200,9 +200,24 @@
 (define-key web-mode-map (kbd "RET") 'newline-and-indent)
 (define-key rjsx-mode-map (kbd "<") 'self-insert-command)
 
+;; CSS
+
+(require 'css-mode)
+(define-key css-mode-map (kbd "RET") 'newline-and-indent)
+
+;; Mustache
+
+(require 'mustache-mode)
+(define-key mustache-mode-map (kbd "RET") 'newline-and-indent)
+
 ;; Rust
 
 (define-key rust-mode-map (kbd "RET") 'newline-and-indent)
+
+;; Scala
+
+(require 'scala-mode)
+(define-key scala-mode-map (kbd "RET") 'newline-and-indent)
 
 ;; Snippets
 

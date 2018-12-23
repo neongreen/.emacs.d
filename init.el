@@ -24,6 +24,15 @@
 
 (require 'projectile)
 
+;; Autocompletion
+(require 'company-tabnine)
+(add-to-list 'company-backends #'company-tabnine)
+(company-tng-configure-default)
+(setq company-frontends
+      '(company-tng-frontend
+        company-pseudo-tooltip-frontend
+        company-echo-metadata-frontend))
+
 ;; When inside a project, even if there is a cabal file in the current
 ;; folder, use the project folder to generate tags. This is useful for
 ;; projects with several services or subprojects.
@@ -109,3 +118,18 @@
 ;; Whitespace
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Better diff colors for solarized-theme
+;;
+;; https://github.com/bbatsov/solarized-emacs/issues/194#issuecomment-395270416
+
+(dolist (face-map '((smerge-base                 . magit-diff-base)
+                    (smerge-lower                . magit-diff-added)
+                    (smerge-markers              . magit-diff-conflict-heading)
+                    (smerge-refined-added        . magit-diff-added-highlight)
+                    (smerge-refined-removed      . magit-diff-removed-highlight)
+                    (smerge-upper                . magit-diff-removed)))
+  (let* ((face (car face-map))
+         (alias (cdr face-map)))
+    (put face 'theme-face nil)
+    (put face 'face-alias alias)))

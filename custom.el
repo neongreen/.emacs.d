@@ -121,6 +121,7 @@
  '(projectile-completion-system (quote grizzl))
  '(require-final-newline t)
  '(ring-bell-function (quote ignore))
+ '(rust-format-on-save t)
  '(safe-local-variable-values
    (quote
     ((haskell-stylish-on-save)

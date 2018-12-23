@@ -44,10 +44,10 @@
 ;; Movement and navigation
 
 (general-define-key
-  "C-1" 'beginning-of-buffer
-  "C-2" 'end-of-buffer
   "C-j" 'my/move-beginning-of-line
   "C-;" 'move-end-of-line
+  "M-j" 'beginning-of-buffer
+  "M-;" 'end-of-buffer
 
   "C-k" 'my/scroll-down-some
   "C-l" 'my/scroll-up-some
@@ -87,15 +87,18 @@
   "M-s C-c" 'cua-copy-region  ;; Ordinary C-c doesn't work in macros
   "M-s C-x" 'cua-cut-region
   "C-S-<backspace>" 'backward-kill-sexp
-  "C-d" 'kill-line
-  "M-c" 'kill-whole-line
+  "C-d" 'my/kill-whole-line
   "M-=" 'align-regexp
   "C-<" 'my/indent-left
   "C->" 'my/indent-right
   "C-'" 'my/duplicate
   "M-d" 'my/one-space
-  "<tab>" 'dabbrev-completion
 )
+
+;; Disable rectangle selection
+
+(require 'cua-base)
+(define-key cua-global-keymap [C-return] nil)
 
 ;; Macros
 
@@ -218,6 +221,28 @@
 
 (require 'scala-mode)
 (define-key scala-mode-map (kbd "RET") 'newline-and-indent)
+
+;; YAML
+
+(require 'yaml-mode)
+(define-key yaml-mode-map (kbd "RET") 'newline-and-indent)
+
+;; Autocomplete
+
+(require 'company)
+(general-define-key :keymaps 'company-active-map
+  (quote [(ctrl return)]) 'company-complete-selection
+  "C-0" 'company-complete-number
+  "C-1" 'company-complete-number
+  "C-2" 'company-complete-number
+  "C-3" 'company-complete-number
+  "C-4" 'company-complete-number
+  "C-5" 'company-complete-number
+  "C-6" 'company-complete-number
+  "C-7" 'company-complete-number
+  "C-8" 'company-complete-number
+  "C-9" 'company-complete-number
+)
 
 ;; Snippets
 

@@ -80,8 +80,13 @@
   (load custom-file))
 (put 'upcase-region 'disabled nil)
 
+;; Smaller fringes
+(fringe-mode '(4 . 4))
+
 ;; Open .ihdf files (Intermediate Haskell) as Markdown
 (add-to-list 'auto-mode-alist '("\\.ihdf\\'" . markdown-mode))
+
+(add-hook 'markdown-mode-hook (lambda () (company-mode -1)))
 
 ;; Open .js files with web-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
@@ -116,7 +121,6 @@
 (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
 
 ;; Whitespace
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Better diff colors for solarized-theme
@@ -133,3 +137,7 @@
          (alias (cdr face-map)))
     (put face 'theme-face nil)
     (put face 'face-alias alias)))
+
+;; https://github.com/company-mode/company-mode/issues/745
+(require 'company-posframe)
+(company-posframe-mode 1)

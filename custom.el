@@ -187,6 +187,6 @@
  '(fixed-pitch ((t (:inherit default))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#7f7fcc" :family ".SF NS Text" :height 0.95 :slant italic))))
  '(font-lock-comment-face ((t (:foreground "#7f7fcc" :family ".SF NS Text" :height 0.95 :slant italic))))
- '(font-lock-doc-face ((t (:foreground "#da5897" :family ".SF NS Text" :height 0.95 :slant italic))))
+ '(font-lock-doc-face ((t (:foreground "#da5897" :family ".SF NS Text" :height 0.95))))
  '(font-lock-string-face ((t (:family ".SF NS Text" :height 0.95))))
  '(variable-pitch ((t (:height 1.0 :family ".SF NS Text")))))

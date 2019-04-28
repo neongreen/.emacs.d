@@ -67,6 +67,8 @@
     ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".stack-work")))
  '(grep-find-template
    "find -L <D> <X> -type f <F> -exec grep <C> -nH -e <R> {} +")
+ '(haskell-hasktags-arguments (quote ("-e -x")))
+ '(haskell-hasktags-path "hasktags")
  '(haskell-hoogle-command nil)
  '(haskell-hoogle-url "http://hoogle.haskell.org/?hoogle=%s")
  '(haskell-indentation-layout-offset 4)
@@ -110,6 +112,7 @@
  '(magit-clone-set-remote\.pushDefault t)
  '(magit-diff-refine-hunk (quote all))
  '(magit-push-always-verify nil)
+ '(magit-section-visibility-indicator (quote ("…" . t)))
  '(magit-stash-arguments nil)
  '(magit-use-overlays nil)
  '(markdown-hr-strings
@@ -128,7 +131,7 @@
  '(org-tags-column -85)
  '(package-selected-packages
    (quote
-    (company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode hasky-extensions hasky-stack helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit magit-gh-pulls markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
+    (beeminder adaptive-wrap psci psc-ide monokai-theme forge wrap-region tty-format free-keys company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode hasky-extensions hasky-stack helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
  '(projectile-completion-system (quote grizzl))
  '(require-final-newline t)
  '(ring-bell-function (quote ignore))
@@ -157,6 +160,7 @@
  '(shell-command-with-editor-mode t)
  '(show-paren-mode t)
  '(show-smartparens-global-mode nil)
+ '(sort-fold-case t)
  '(sp-show-pair-from-inside nil)
  '(split-width-threshold 120)
  '(tags-case-fold-search nil)
@@ -188,5 +192,4 @@
  '(font-lock-comment-delimiter-face ((t (:foreground "#7f7fcc" :family ".SF NS Text" :height 0.95 :slant italic))))
  '(font-lock-comment-face ((t (:foreground "#7f7fcc" :family ".SF NS Text" :height 0.95 :slant italic))))
  '(font-lock-doc-face ((t (:foreground "#da5897" :family ".SF NS Text" :height 0.95))))
- '(font-lock-string-face ((t (:family ".SF NS Text" :height 0.95))))
  '(variable-pitch ((t (:height 1.0 :family ".SF NS Text")))))

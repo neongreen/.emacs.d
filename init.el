@@ -145,6 +145,10 @@
 (require 'company-posframe)
 (company-posframe-mode 1)
 
+;; Elm
+(require 'elm-mode)
+(add-hook 'elm-mode-hook (lambda () (elm-format-on-save-mode 1)))
+
 ;; Remove line continuation marks
 (setf (cdr (assq 'continuation fringe-indicator-alist))
       '(nil vertical-bar)

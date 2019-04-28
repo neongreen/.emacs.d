@@ -120,10 +120,8 @@
       (save-excursion (org-table-align))))))
 (put 'downcase-region 'disabled nil)
 
-;; Let magit work with Github pull-requests
-
-(require 'magit-gh-pulls)
-(add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
+;; Let magit work with Github
+(require 'forge)
 
 ;; Whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

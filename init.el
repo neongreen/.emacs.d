@@ -141,3 +141,8 @@
 ;; https://github.com/company-mode/company-mode/issues/745
 (require 'company-posframe)
 (company-posframe-mode 1)
+
+;; Remove line continuation marks
+(setf (cdr (assq 'continuation fringe-indicator-alist))
+      '(nil vertical-bar)
+      )

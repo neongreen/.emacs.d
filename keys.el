@@ -62,9 +62,6 @@
   "C-b" 'my/push-mark
   "M-b" 'my/pop-mark
 
-  "M-9" 'backward-sexp
-  "M-0" 'forward-sexp
-
   "C-r" 'goto-line
 )
 
@@ -93,6 +90,8 @@
   "C->" 'my/indent-right
   "C-'" 'my/duplicate
   "M-d" 'my/one-space
+  "C-\\" 'insert-char
+  "M--" (lambda () (interactive) (insert "–"))
 )
 
 ;; Disable rectangle selection
@@ -194,6 +193,8 @@
   "C-c y"   'haskell-hoogle
   "M-q"     'hindent-reformat-decl-or-fill
   "M-8"     'hasky-stack-execute
+  "M-9"     'haskell-navigate-imports-go
+  "M-0"     'haskell-navigate-imports-return
 )
 
 ;; Javascript
@@ -257,6 +258,11 @@
 (general-define-key :keymaps 'ivy-minibuffer-map
   "M-RET" 'ivy-immediate-done
 )
+
+;; Elm
+(require 'elm-mode)
+
+(define-key elm-mode-map (kbd "RET") 'newline-and-indent)
 
 ;; End of key definitions.
 

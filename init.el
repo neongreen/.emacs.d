@@ -86,7 +86,12 @@
 ;; Open .ihdf files (Intermediate Haskell) as Markdown
 (add-to-list 'auto-mode-alist '("\\.ihdf\\'" . markdown-mode))
 
-(add-hook 'markdown-mode-hook (lambda () (company-mode -1)))
+(require 'adaptive-wrap)
+(require 'company-mode)
+(add-hook 'markdown-mode-hook
+  (lambda ()
+    (company-mode -1)
+    (adaptive-wrap-prefix-mode 1)))
 
 ;; Open .js files with web-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))

@@ -87,7 +87,7 @@
 (add-to-list 'auto-mode-alist '("\\.ihdf\\'" . markdown-mode))
 
 (require 'adaptive-wrap)
-(require 'company-mode)
+(require 'company)
 (add-hook 'markdown-mode-hook
   (lambda ()
     (company-mode -1)

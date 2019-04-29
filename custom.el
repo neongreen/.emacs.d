@@ -166,6 +166,7 @@
  '(tags-case-fold-search nil)
  '(text-scale-mode-step 1.1)
  '(tool-bar-mode nil)
+ '(transient-display-buffer-action (quote (display-buffer-below-selected)))
  '(undo-limit 8000000)
  '(undo-strong-limit 12000000)
  '(use-dialog-box nil)

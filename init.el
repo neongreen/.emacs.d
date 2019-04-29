@@ -11,9 +11,11 @@
 
 ;; Get path from shell.
 (when (memq window-system '(mac ns x))
+  (require 'exec-path-from-shell)
   (exec-path-from-shell-initialize))
 
 ;; Prevent the Magit upgrade warning from showing every time.
+(require 'magit)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; Persist minibuffer history.

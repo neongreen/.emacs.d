@@ -92,6 +92,7 @@
   "M-d" 'my/one-space
   "C-\\" 'insert-char
   "M--" (lambda () (interactive) (insert "–"))
+  "M-_" (lambda () (interactive) (insert "—"))
 )
 
 ;; Disable rectangle selection

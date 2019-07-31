@@ -24,6 +24,7 @@
 (require 'counsel)
 (require 'phi-search)
 (require 'crux)
+(require 'projectile)
 
 ;; Make C-i different from TAB
 
@@ -133,9 +134,9 @@
 (general-define-key
   "C-f"     (general-simulate-keys "C-x C-s")
 
-  "M-s p"   'projectile-switch-project
-  "C-o"     'find-file
-  "C-p"     'counsel-git
+  "M-o"     'projectile-switch-project
+  "C-o"     'projectile-find-file
+  "C-c C-o" 'find-file
 
   "C-x C-r" 'my/rename-current-buffer-file
 

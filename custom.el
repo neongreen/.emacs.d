@@ -14,11 +14,12 @@
  '(company-tooltip-limit 3)
  '(compilation-ask-about-save nil)
  '(compilation-search-path (quote (nil "../" "../../")))
+ '(css-indent-offset 4)
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (solarized-dark)))
  '(custom-safe-themes
    (quote
-    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("d91ef4e714f05fff2070da7ca452980999f5361209e679ee988e3c432df24347" "0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(dabbrev-case-distinction nil)
  '(dabbrev-case-fold-search nil)
  '(dabbrev-case-replace nil)
@@ -38,6 +39,7 @@
      (files
       (".#*" "*~" "*.so" "*.jpg" "*.png" "*.gif" "*.pdf" "*.gz" "*.zip")))))
  '(fiplr-root-markers (quote (".git" ".svn" ".hg" ".bzr" "stack.yaml")))
+ '(frame-resize-pixelwise t)
  '(glasses-original-separator "-")
  '(glasses-separator "-")
  '(global-company-mode t)
@@ -130,14 +132,28 @@
  '(org-tags-column -85)
  '(package-selected-packages
    (quote
-    (adaptive-wrap psci psc-ide monokai-theme forge wrap-region tty-format free-keys company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode hasky-extensions hasky-stack helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
- '(projectile-completion-system (quote grizzl))
+    (protobuf-mode go-mode nix-mode prettier-js intero w3 forge adaptive-wrap psci psc-ide monokai-theme wrap-region tty-format free-keys company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
+ '(prettier-js-args nil)
+ '(prettier-js-command "prettier")
+ '(projectile-completion-system (quote ivy))
+ '(projectile-indexing-method (quote hybrid))
+ '(projectile-mode t nil (projectile))
+ '(projectile-require-project-root nil)
  '(require-final-newline t)
  '(ring-bell-function (quote ignore))
  '(rust-format-on-save t)
  '(safe-local-variable-values
    (quote
-    ((haskell-indentation-where-pre-offset . 2)
+    ((haskell-process-path-cabal . "nix-cabal")
+     (haskell-process-type . cabal-new-repl)
+     (haskell-process-type quote cabal-new-repl)
+     (eval when
+           (and
+            (buffer-file-name)
+            (string-match ".scss$"
+                          (buffer-file-name)))
+           (prettier-js-mode))
+     (haskell-indentation-where-pre-offset . 2)
      (haskell-indentation-where-post-offset . 2)
      (haskell-indentation-starter-offset . 2)
      (haskell-indentation-left-offset . 2)
@@ -159,7 +175,7 @@
  '(shell-command-with-editor-mode t)
  '(show-paren-mode t)
  '(show-smartparens-global-mode nil)
- '(sort-fold-case t)
+ '(sort-fold-case t t)
  '(sp-show-pair-from-inside nil)
  '(split-width-threshold 120)
  '(tags-case-fold-search nil)
@@ -179,7 +195,7 @@
  '(web-mode-enable-part-face nil)
  '(word-wrap t)
  '(yas-indent-line (quote fixed))
- '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
+ '(yas-snippet-dirs (quote ("~/.emacs.d/snippets"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

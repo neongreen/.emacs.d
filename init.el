@@ -12,7 +12,8 @@
 ;; Get path from shell.
 (when (memq window-system '(mac ns x))
   (require 'exec-path-from-shell)
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "NIX_PATH"))
 
 ;; Prevent the Magit upgrade warning from showing every time.
 (require 'magit)

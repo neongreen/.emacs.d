@@ -23,7 +23,6 @@
 (require 'web-mode)
 (require 'counsel)
 (require 'phi-search)
-(require 'hasky-stack)
 (require 'crux)
 
 ;; Make C-i different from TAB
@@ -186,16 +185,16 @@
 ;; Haskell
 
 (general-define-key :keymaps 'haskell-mode-map
-  "C-y"     'haskell-mode-jump-to-tag
-  "M-y"     'my/haskell-mode-ask-for-tag
+  "C-y" 'haskell-mode-jump-to-tag
+  "M-y" 'my/haskell-mode-ask-for-tag
   "C-c C-p" 'haskell-process-restart
   "C-c C-o" 'haskell-session-change-target
   "C-c v a" 'haskell-cabal-add-dependency
-  "C-c y"   'haskell-hoogle
-  "M-q"     'hindent-reformat-decl-or-fill
-  "M-8"     'hasky-stack-execute
-  "M-9"     'haskell-navigate-imports-go
-  "M-0"     'haskell-navigate-imports-return
+  "C-c y" 'haskell-hoogle
+  "C-c <C-i>" 'haskell-mode-show-type-at
+  "M-q" 'hindent-reformat-decl-or-fill
+  "M-9" 'haskell-navigate-imports-go
+  "M-0" 'haskell-navigate-imports-return
 )
 
 ;; Javascript

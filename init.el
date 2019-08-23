@@ -1,7 +1,5 @@
-;; Add .emacs.d to the list of folders to load Lisp files from. “t” means
-;; that .emacs.d would be added to the end, which is done so that there won't
-;; be conflicts between my files and files of various libraries.
-(add-to-list 'load-path user-emacs-directory t)
+;; Add .emacs.d/lisp/ to the list of folders to load Lisp files from.
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; Initialise package system.
 (require 'package)

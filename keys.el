@@ -49,15 +49,19 @@
   "M-j" 'beginning-of-buffer
   "M-;" 'end-of-buffer
 
+  "M-k" 'left-word
+  "M-l" 'right-word
+
   "C-k" 'my/scroll-down-some
   "C-l" 'my/scroll-up-some
-  "M-l" 'recenter-top-bottom
+  "C-c l" 'recenter-top-bottom
 
   "C-/" 'next-error
   "M-/" 'previous-error
 
   "M-i" 'avy-goto-word-or-subword-1
   "<C-i>" 'my/goto-char-or-expand
+  "C-p" 'avy-goto-line
 
   "C-b" 'my/push-mark
   "M-b" 'my/pop-mark
@@ -93,6 +97,7 @@
   "C-\\" 'insert-char
   "M--" (lambda () (interactive) (insert "–"))
   "M-_" (lambda () (interactive) (insert "—"))
+  "M-u" 'upcase-char
 )
 
 ;; Disable rectangle selection
@@ -194,8 +199,6 @@
   "C-c y" 'haskell-hoogle
   "C-c <C-i>" 'haskell-mode-show-type-at
   "M-q" 'hindent-reformat-decl-or-fill
-  "M-9" 'haskell-navigate-imports-go
-  "M-0" 'haskell-navigate-imports-return
 )
 
 ;; Javascript

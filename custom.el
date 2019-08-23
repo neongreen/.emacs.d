@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(ag-arguments (quote ("--smart-case" "--hidden" "--ignore" ".git")))
  '(ag-highlight-search t)
+ '(avy-style (quote words))
  '(backup-by-copying t)
  '(backup-directory-alist (quote (("." . "~/.saves"))))
  '(column-number-mode t)
@@ -40,10 +41,13 @@
       (".#*" "*~" "*.so" "*.jpg" "*.png" "*.gif" "*.pdf" "*.gz" "*.zip")))))
  '(fiplr-root-markers (quote (".git" ".svn" ".hg" ".bzr" "stack.yaml")))
  '(frame-resize-pixelwise t)
+ '(fringe-mode (quote (4 . 4)) nil (fringe))
  '(glasses-original-separator "-")
  '(glasses-separator "-")
  '(global-company-mode t)
  '(global-hl-line-mode nil)
+ '(global-linum-mode nil)
+ '(gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
  '(grep-command "grep --color -nH -e ")
  '(grep-files-aliases
    (quote
@@ -132,7 +136,7 @@
  '(org-tags-column -85)
  '(package-selected-packages
    (quote
-    (protobuf-mode go-mode nix-mode prettier-js intero w3 forge adaptive-wrap psci psc-ide monokai-theme wrap-region tty-format free-keys company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
+    (lsp-haskell ghcid quelpa protobuf-mode go-mode nix-mode prettier-js intero w3 forge adaptive-wrap psci psc-ide monokai-theme wrap-region tty-format free-keys company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
  '(prettier-js-args nil)
  '(prettier-js-command "prettier")
  '(projectile-completion-system (quote ivy))
@@ -203,9 +207,13 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:weight normal :height 160 :family "Iosevka"))))
  '(ag-match-face ((t (:foreground "red" :weight bold))))
+ '(avy-lead-face-0 ((t (:background nil :inherit isearch))))
+ '(avy-lead-face-1 ((t (:background nil :inherit isearch))))
+ '(avy-lead-face-2 ((t (:background nil :inherit isearch))))
  '(company-tooltip-selection ((t (:inherit popup-menu-selection-face))))
  '(fixed-pitch ((t (:inherit default))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#7f7fcc" :family ".SF NS Text" :height 0.95 :slant italic))))
  '(font-lock-comment-face ((t (:foreground "#7f7fcc" :family ".SF NS Text" :height 0.95 :slant italic))))
  '(font-lock-doc-face ((t (:foreground "#da5897" :family ".SF NS Text" :height 0.95))))
+ '(linum ((t (:inherit default :background "#fdf6e3" :foreground "#93a1a1" :underline nil :weight thin))))
  '(variable-pitch ((t (:height 1.0 :family ".SF NS Text")))))

@@ -222,11 +222,6 @@
 
 (define-key rust-mode-map (kbd "RET") 'newline-and-indent)
 
-;; Scala
-
-(require 'scala-mode)
-(define-key scala-mode-map (kbd "RET") 'newline-and-indent)
-
 ;; YAML
 
 (require 'yaml-mode)

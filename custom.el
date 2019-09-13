@@ -12,6 +12,7 @@
  '(company-idle-delay 0)
  '(company-search-regexp-function (quote regexp-quote))
  '(company-show-numbers t)
+ '(company-tabnine-show-annotation nil)
  '(company-tooltip-limit 3)
  '(compilation-ask-about-save nil)
  '(compilation-search-path (quote (nil "../" "../../")))
@@ -136,7 +137,7 @@
  '(org-tags-column -85)
  '(package-selected-packages
    (quote
-    (lsp-haskell ghcid quelpa protobuf-mode go-mode nix-mode prettier-js intero w3 forge adaptive-wrap psci psc-ide monokai-theme wrap-region tty-format free-keys company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
+    (nix-update lsp-haskell ghcid quelpa protobuf-mode go-mode nix-mode prettier-js intero w3 forge adaptive-wrap psci psc-ide monokai-theme wrap-region tty-format free-keys company-posframe dhall-mode git-link php-mode terraform-mode elisp-format company-tabnine jinja2-mode mustache ace-jump-mode adoc-mode ag auto-complete auto-indent-mode avy browse-kill-ring+ coffee-mode counsel counsel-gtags counsel-projectile crux csv-mode dockerfile-mode dumb-jump elm-mode elpy exec-path-from-shell expand-region fill-column-indicator findr fiplr flow-minor-mode general ghci-completion gist github-issues god-mode haskell-mode helm helm-projectile hindent hl-line+ ht jsx-mode linum-relative macrostep magit markdown-mode multi-web-mode multiple-cursors mustache-mode neotree nim-mode noflet phi-search projectile pug-mode purescript-mode rainbow-delimiters rjsx-mode rudel rust-mode shell-pop smartparens smex smooth-scroll smooth-scrolling solarized-theme sublimity swiper swoop travis typescript-mode typo undo-tree undohist vue-html-mode vue-mode web-mode xterm-color yaml-mode yasnippet)))
  '(prettier-js-args nil)
  '(prettier-js-command "prettier")
  '(projectile-completion-system (quote ivy))
@@ -182,6 +183,7 @@
  '(sort-fold-case t t)
  '(sp-show-pair-from-inside nil)
  '(split-width-threshold 120)
+ '(tab-width 4)
  '(tags-case-fold-search nil)
  '(text-scale-mode-step 1.1)
  '(tool-bar-mode nil)
